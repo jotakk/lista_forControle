@@ -6,12 +6,16 @@
     No final, apresente o maior número informado pelo usuário.
     */
 
-    //ENTRADA
+     //ENTRADA
+     numeros = []
 
-    
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+//PROCESSAMENTO
+for (contador = 1; contador <= 5; contador++){
+let numero = Number(prompt(`Informe um número:`))
+numeros.push(numero)
+}
+numeros.sort((a,b)=> b-a);
+//SAÍDA
+document.write(`O maior número apresentado pelo usuário é: ${numeros[0]}`);
 
 </script>

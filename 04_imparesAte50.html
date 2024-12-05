@@ -6,11 +6,14 @@
     */
 
     //ENTRADA
-
+    let impares = []
 
     //PROCESSAMENTO
-
-
+    for(contador = 1; contador <=50; contador++){
+    if (contador % 2 != 0){
+    impares.push(contador);
+    }
+    }
     //SAÍDA
-
+    document.write(`Os números impares são: ${impares}`);
 </script>
