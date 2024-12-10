@@ -6,11 +6,18 @@
     */
 
     //ENTRADA
-
-    
+    let habitantes = 50000;
+    let crescimento = 0;
+    let cincoAnos = 0;
     //PROCESSAMENTO
-    
+    for(contador = 1; contador <= 10; contador++){
+        crescimento = habitantes * 0.015;
+        habitantes += crescimento;
+        if(contador === 5){
+        cincoAnos = habitantes
+        };
+    }
 
     //SAÍDA
-
+    document.write(`População prevista para um prazo de 5 anos: ${Math.round(cincoAnos).toLocaleString(0)} </br> População prevista para um prazo de 10 anos: ${Math.round(habitantes).toLocaleString()}`);
 </script>

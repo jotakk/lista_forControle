@@ -6,11 +6,24 @@
     */
 
     //ENTRADA
-
-    
+    const numeroInicial = Number(prompt(`Informe um número:`));
+    const numeroFinal = Number(prompt(`Informe outro número:`));
+    let pares = [];
+    let impares = [];
     //PROCESSAMENTO
+    if(numeroInicial >= numeroFinal){
+        alert(`O número inicial deve ser menor que o número final.`);
+    }
 
+    for(contador = numeroInicial; contador <= numeroFinal; contador++){
+        if(contador % 2 === 0){
+        pares.push(contador);
+        }
+        else{
+        impares.push(contador);
+        }
+    }
     
     //SAÍDA
-
+    document.write(`Ímpares entre ${numeroInicial} e ${numeroFinal}: ${impares.join(`, `)}. </br> Pares entre ${numeroInicial} e ${numeroFinal}: ${pares.join(`, `)}.`);
 </script>

@@ -7,11 +7,14 @@
     */
 
     //ENTRADA
-
+    let numeros = []
     
     //PROCESSAMENTO
-
-    
+    for(contador = 1; contador <= 5; contador++){
+        const nu = Number(prompt(`Informe o ${contador}º número:`));
+        numeros.push(nu);
+    }
+    const maior = Math.max(...numeros);
     //SAÍDA
-
+    document.write(`O maior numero informado foi: ${maior}`);
 </script>

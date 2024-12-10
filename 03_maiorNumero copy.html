@@ -2,16 +2,19 @@
 <script>
     /*
     PROBLEMA
-    Faça um programa que peça ao usuário para informar cinco números.
-    No final, apresente o maior número informado pelo usuário.
+    Pergunte ao professor quantas notas o aluno obteve. Na sequência, usando for, peça para o professor informar todas as notas do aluno.
+    Calcule a média das notas e apresente o resultado na tela.
     */
 
     //ENTRADA
-
-
+    const notasObtidas = Number(prompt(`Informe a quantidade de notas obtidas:`));
+    let soma = 0;
     //PROCESSAMENTO
-
-
+    for(contador = 1; contador <= notasObtidas; contador++){
+        const notas = Number(prompt(`Informe a ${contador}ª nota do aluno:`));
+        soma = soma + notas;
+    }
+    const media = (soma / notasObtidas)
     //SAÍDA
-
+    document.write(`A media das notas do aluno será de: ${media}`);
 </script>

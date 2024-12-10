@@ -8,11 +8,61 @@
     */
 
     //ENTRADA
-
-
+    const representantesUm = prompt(`Informe o nome do primeiro candidato a representante da sala:`);
+    const representantesDois = prompt(`Informe o nome do segundo candidato a representante da sala:`);
+    const representantesTres = prompt(`Informe o nome do terceiro candidato a representante da sala:`);
+    const quantidade = Number(prompt(`Informe a quantidade de alunos votantes:`));
+    let votosUm = 0;
+    let votosDois = 0;
+    let votosTres = 0;
+    let resultado = [];
+    let ganhador;
+    let quantidadeUm = 0;
+    let quantidadeDois = 0;
+    let quantidadeTres = 0;
     //PROCESSAMENTO
+    for (contador = 1; contador <= quantidade; contador++) {
+        const votacao = (prompt(`${representantesUm}(a), ${representantesDois}(b), ${representantesTres}(c)\nDigite o número do representante em que quer votar:`)).toLowerCase();
+        if (votacao == `a`) {
 
+            quantidadeUm += 1;
+        }
+        else if (votacao == `b`) {
 
+            quantidadeDois += 1;
+        }
+        else if (votacao == `c`) {
+
+            quantidadeTres += 1;
+        }
+        else {
+            alert("Voto inválido, por favor, digite a, b ou c.");
+        }
+    }
+    const porcentagemUm = 100 * quantidadeUm / quantidade;
+    const porcentagemDois = 100 * quantidadeDois / quantidade;
+    const porcentagemTres = 100 * quantidadeTres / quantidade;
+    resultado.push(quantidadeUm, quantidadeDois, quantidadeTres);
+    const realResultado = Math.max(...resultado);
+    if (realResultado === quantidadeUm) {
+        ganhador = representantesUm;
+    }
+    else if (realResultado === quantidadeDois) {
+        ganhador = representantesDois;
+    }
+    else if (realResultado === quantidadeTres) {
+        ganhador = representantesTres;
+    }
     //SAÍDA
-
+    document.write(`<strong>Resultado da votação:</strong>
+    </br> ${ganhador}: ${realResultado}
+    </br> <strong>Quantidade de votos por candidato:</strong>
+    </br> ${representantesUm}: ${quantidadeUm}
+    </br> ${representantesDois}: ${quantidadeDois}
+    </br> ${representantesTres}: ${quantidadeTres}
+    </br> <strong>Porcentagem:</strong>
+    </br> ${representantesUm}: ${porcentagemUm.toFixed(0)}%
+    </br> ${representantesDois}: ${porcentagemDois.toFixed(0)}%
+    </br> ${representantesTres}: ${porcentagemTres.toFixed(0)}%
+    `)
 </script>
