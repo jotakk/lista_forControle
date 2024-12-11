@@ -10,14 +10,16 @@
     */
 
     //ENTRADA
-<<<<<<< HEAD
-    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
-    let minusculas = [];
-=======
->>>>>>> 99ba88996d2cc6eb902786afde1882320b35b353
-    
-    //PROCESSAMENTO
-   
-    //SAÍDA
 
+    let listaDeLetras = ["a", "b", "d", "e", "E", "F", "C", "U", "u", "e", "W", "D"];
+    let letras = [];
+    //PROCESSAMENTO
+    for(letra of listaDeLetras){
+        if(letra == letra.toLowerCase() && !letras.includes(letra)){
+            letras.push(letra);
+        }
+    }
+    letras.sort();
+    //SAÍDA
+    document.write(`letras minúsculas: ${letras.join(`, `)}.`);
 </script>

@@ -5,11 +5,14 @@
     */
 
     //ENTRADA
-
+    const limite = 2000;
+    let investimento = 1000;
 
     //PROCESSAMENTO
-
+    for(contador = 0; investimento < limite; contador++){
+        investimento += investimento * 0.02;
+    }
 
     //SAÍDA
-
+    document.write(`Para que Joãozinho consiga o total de R$ 2.000,00 com o rendimento de 2% ao dia, ele precisará de: ${contador}`);
 </script>
