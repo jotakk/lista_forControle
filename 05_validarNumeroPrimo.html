@@ -2,15 +2,25 @@
 <script>
     /*
     PROBLEMA
-    Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelo usuário é um número primo e apresente na tela.
+    Faça um programa que peça para o usuário informar um número. Identifique se o número fornecido pelousuário é um número primo e apresente na tela.
     */
 
     //ENTRADA
     const numero = Number(prompt(`Informe um número:`));
-
+    let mensagem = `Este número é primo`;
+    let divisoes = 0;
     //PROCESSAMENTO
-    for(contador = 1; contador <= numero)
-
+    for(contador = 1; contador <= numero; contador++){
+        if(numero % contador == 0){
+            divisoes++;
+        }
+    }
     //SAÍDA
-
+    if(divisoes == 2){
+        alert(mensagem);
+    }
+    else{
+        mensagem = `Este número não é primo`;
+        alert(mensagem);
+    }
 </script>
